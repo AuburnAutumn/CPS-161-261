@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane id="distanceButton" prefHeight="72.0" prefWidth="308.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Label fx:id="label1" />
+      <Label fx:id="label2" GridPane.rowIndex="1" />
+      <TextField fx:id="textField1" onKeyReleased="#clearField" GridPane.columnIndex="1" />
+      <TextField fx:id="textField2" onKeyReleased="#clearField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <RadioButton fx:id="distanceButton" mnemonicParsing="false" onAction="#setLabel" text="Distance" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <toggleGroup>
+            <ToggleGroup fx:id="buttonGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="tempButton" mnemonicParsing="false" onAction="#setLabel" text="Temperature" toggleGroup="$buttonGroup" GridPane.rowIndex="2" />
+      <RadioButton fx:id="weightButton" mnemonicParsing="false" onAction="#setLabel" text="Weight" toggleGroup="$buttonGroup" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="calculateButton" mnemonicParsing="false" onMouseClicked="#calculate" text="Calculate!" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   </children>
+</GridPane>
